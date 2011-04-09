@@ -1,3 +1,9 @@
+GIT
+  remote: https://github.com/thoughtbot/flutie.git
+  revision: bac3f528317a6af0564d784e1a52870ae3593977
+  specs:
+    flutie (1.1.5)
+
 GEM
   remote: http://rubygems.org/
   specs:
@@ -73,6 +79,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  flutie (~> 1.1)!
   formtastic (~> 1.2.3)
   rails (= 3.0.5)
   sqlite3

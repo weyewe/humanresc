@@ -1,0 +1,18 @@
+#header { height: 80px; margin:0 ; padding:0 ; text-align:left; border-bottom: 1px solid #C8C8C8;}
+#header div.inner { margin: 0 auto; padding: 11px 0 8px; width: 996px;  }
+#header div.inner  a {  vertical-align: top; }
+			.logo { background: url("/images/logo.png") no-repeat scroll 0 0 transparent;   display: inline-block; height: 54px; margin: 2px 0 0;  text-indent: -9999px;   width: 165px; }
+#header div.inner div.menu { display: inline-block; margin-top: 9px; vertical-align: top; z-index: 1011; height:54px;}
+#header div.inner div.menu a { font-size: 20px; position: relative; top:22px; text-decoration: none; cursor:pointer; margin: 0 5px 0; padding: 0 3px 0;}
+#header div.inner div.menu a:hover { background-color: rgb(220,220,220);}
+#header div.inner div.menu a.active { background-color: rgb(200,200,200);}
+#header div.inner div.menu a.active:hover { background-color: rgb(200,200,200);}
+#header div.inner div.account_management_menu { float: right;  margin-top: 9px;  width: 220px;}
+
+#content-wrapper { margin: 0 auto; padding: 11px 0 8px; width: 996px;}
+
+	#content ul div.hr_tool { display: block; margin-bottom:20px; padding: 5px 10px 5px;}
+	#content ul div.hr_tool:hover { background-color: rgb(240,240,240); }
+	#content ul div.hr_tool a.illustration { float:left; margin-right: 8px;}
+	#content ul div.hr_tool div.illustration_text  a {font-size: 16px; position:relative; top:15px; cursor: pointer; text-decoration : none; color: rgb(150,150,150);}
+	#content ul div.hr_tool div.illustration_text  a:hover { color: rgb(80,80,80);}

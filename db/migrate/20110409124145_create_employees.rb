@@ -1,8 +1,11 @@
 class CreateEmployees < ActiveRecord::Migration
   def self.up
     create_table :employees do |t|
+      t.string :nik
       t.string :name
       t.string :sex  # 0 == female, 1 == male
+      t.string :birthplace
+      t.date :birthdate
       t.string :nationality
       t.string :race
       t.string :identity_number
@@ -23,6 +26,7 @@ class CreateEmployees < ActiveRecord::Migration
       # => 3. Kontrak
       # => 4. Kost
       
+      
       t.integer :marriage_status 
       # => 1. Menikah
       # => 2. Duda/Janda cerai
@@ -32,6 +36,7 @@ class CreateEmployees < ActiveRecord::Migration
       t.string :residential_phone_number
       t.string :mobile_phone_number
       
+      t.string :residential_status
       t.string :tax_number
       t.string :bank
       t.string :bank_account_number

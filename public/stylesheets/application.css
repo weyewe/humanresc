@@ -1,3 +1,4 @@
+#wrapper { background-color: rgb(240,240,240); }
 #header { height: 80px; margin:0 ; padding:0 ; text-align:left; border-bottom: 1px solid #C8C8C8;}
 #header div.inner { margin: 0 auto; padding: 11px 0 8px; width: 996px;  }
 #header div.inner  a {  vertical-align: top; }
@@ -12,7 +13,30 @@
 #content-wrapper { margin: 0 auto; padding: 11px 0 8px; width: 996px;}
 
 	#content ul div.hr_tool { display: block; margin-bottom:20px; padding: 5px 10px 5px;}
-	#content ul div.hr_tool:hover { background-color: rgb(240,240,240); }
+	#content ul div.hr_tool:hover { background-color: rgb(250,250,250); }
 	#content ul div.hr_tool a.illustration { float:left; margin-right: 8px;}
 	#content ul div.hr_tool div.illustration_text  a {font-size: 16px; position:relative; top:15px; cursor: pointer; text-decoration : none; color: rgb(150,150,150);}
 	#content ul div.hr_tool div.illustration_text  a:hover { color: rgb(80,80,80);}
+	
+	div#form_new_employee { display:none;}
+	div.form_wrapper { width : 835px; }
+	div.form_wrapper fieldset { margin: 10px 0 0;  padding: 0;}
+	div.form_wrapper fieldset legend { background: none repeat scroll 0 0 #493F0B; color: #FFFFFF;  font-size: 1.3em;  margin-left: 1em;  padding: 5px; text-transform: uppercase;}
+	div.form_wrapper fieldset ol { list-style: none outside none; padding: 10px 10px 0;}
+	div.form_wrapper fieldset ol li { line-height: 3.4em; padding-bottom: 1em; position: relative;}
+	div.form_wrapper fieldset ol li label { clear: left;  float: left; line-height: 3.4em; margin-right: 5px;  padding-right: 30px; position: relative;  text-align: right;  width: 15em;}
+	div.form_wrapper fieldset ol li input { background: none repeat scroll 0 0 #F5F6D4;  border: 1px solid #493F0B;  color: #1E1903;  font-size: 1.4em;  padding: 5px;}
+	div.form_wrapper fieldset#submitform {background:none;border-style: none; }
+	div.form_wrapper fieldset input#photo { cursor: pointer;}
+	div.form_wrapper fieldset.second { display: none;}
+	div.form_wrapper fieldset.third { display : none;}
+	div.form_wrapper fieldset.submit { display : none;}
+			
+	div#fieldset-control input#formsubmit { background: none repeat scroll 0 0 #F5F6D4; border: 1px solid #493F0B; color: #1E1903; font-size: 1.4em; padding: 5px; cursor: pointer; float:right; display:none;}
+	div#fieldset-control a { background: none repeat scroll 0 0 #493F0B; color: #FFFFFF; font-size: 1.3em; margin-left: 0;  padding: 5px; text-transform: uppercase; text-decoration : none;}
+	div#fieldset-control a.next { float: right;}
+	div#fieldset-control a.next:hover { color: rgb(60,60,60); background: rgb(200,200,200); font-weight: bold;}
+	div#fieldset-control a.back { float: left; display:none;}
+	div#fieldset-control a.back:hover {color: rgb(60,60,60); background: rgb(200,200,200); font-weight: bold; }
+	
+div#footer { height:100px;}

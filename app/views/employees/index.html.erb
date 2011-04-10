@@ -1,65 +1,44 @@
-<div id="wrapper">
-	<div id="header">
-		<div class="inner clearfix">
-			<a class="logo" title="HumanResc Home">HumanResc</a>
-			<div class="menu">
-				<a class="HR_MANAGER active">HR Management</a>
+
+<div id="content-wrapper">
+	<div id="breadcrumb">
+	</div>
+	
+	<div id="content">
+		<ul>
+			<div class="hr_tool clearfix">
+				<a class="illustration add_employee" href="#new_employee_wrapper"><img src="/images/new_employee_icon.png" /></a>
+				<div class="illustration_text">
+					<a>Add Employee</a>
+				</div>
 			</div>
 			
-			<div class="menu">
-				<a class="Payroll">Payroll</a>
+			<div class="hr_tool clearfix">
+				<a class="illustration"><img src="/images/edit_attendance_icon.png" /></a>
+				<div class="illustration_text">
+					<a>Edit Attendance</a>
+				</div>
 			</div>
 			
-			<div class="account_management_menu">
-				<span>willy@gmail.com</span>
-				<a class="logout">LogOut</a>
+			<div class="hr_tool clearfix">
+				<a class="illustration"><img src="/images/report_icon.png" /></a>
+				<div class="illustration_text">
+					<a>Report</a>
+				</div>
 			</div>
-		</div>
-	</div> <!-- #header -->
-	
-	<div id="content-wrapper">
-		<div id="breadcrumb">
-		</div>
-		
-		<div id="content">
-			<ul>
-				<div class="hr_tool clearfix">
-					<a class="illustration"><img src="/images/rails.png" /></a>
-					<div class="illustration_text">
-						<a>Add Employee</a>
-					</div>
+			
+			<div class="hr_tool clearfix">
+				<a class="illustration"><img src="/images/search_icon.png" /></a>
+				<div class="illustration_text">
+					<a>Search</a>
 				</div>
-				
-				<div class="hr_tool clearfix">
-					<a class="illustration"><img src="/images/rails.png" /></a>
-					<div class="illustration_text">
-						<a>Edit Attendance</a>
-					</div>
-				</div>
-				
-				<div class="hr_tool clearfix">
-					<a class="illustration"><img src="/images/rails.png" /></a>
-					<div class="illustration_text">
-						<a>Report</a>
-					</div>
-				</div>
-				
-				<div class="hr_tool clearfix">
-					<a class="illustration"><img src="/images/rails.png" /></a>
-					<div class="illustration_text">
-						<a>Search</a>
-					</div>
-				</div>
-			</ul>
-		</div>
+			</div>
+		</ul>
 	</div>
-	
-	<div id="form_new_employee">
-		
-	</div>
-	
-	<div id="footer">
-	</div>
-	
-	
-</div> <!-- #wrapper -->
+</div>
+
+
+<%= render :partial => "new_employee_form", :locals => { :employee => @employee } %>
+
+
+
+

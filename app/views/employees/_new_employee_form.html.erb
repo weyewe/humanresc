@@ -1,0 +1,304 @@
+<div id="form_new_employee">
+	<div class="form_wrapper " id="new_employee_wrapper">
+		<!-- <form id="new_employee_form"> -->
+		<% form_for employee, :html => { :multipart => true } do |f| %>
+			<fieldset id="personal" class="first employee-partition">
+				<legend><span>Data Pribadi</span></legend>
+				<ol>
+					<li>
+						
+						<!-- <label class="required" title="nama lengkap" for="name">
+												Nama Lengkap
+											</label> -->
+						<%= f.label :name, "Nama Lengkap", :class => "required"%>
+						<%= f.text_field :name %>
+						<!-- <input id="name" type="text" name="name"> -->
+					</li>
+					
+					<li>
+						<!-- <label class="required" title="NIK" for="nik">
+													NIK
+												</label>
+												<input id="nik" type="text" name="nik"> -->
+						<%= f.label :nik, "NIK", :class => "required"%>
+						<%= f.text_field :nik %>
+					</li>
+					
+					<li>
+						<!-- <label class="required" title="Jenis Kelamin" for="sex">
+													Jenis Kelamin
+												</label> -->
+						
+						<!-- <input type="radio" value="Male" name="sex" id="sex" class="radio" name="sex">
+													<%= "Laki-laki" %>
+												<input type="radio" value="Female" name="sex" id="sex" class="radio" name="sex">
+													Perempuan -->
+						<%= f.label :sex, "Jenis Kelamin", :class => "required"%>
+						<%= f.radio_button 'sex', '0' %> <%= "Laki-laki" %>
+						<%= f.radio_button 'sex', '1' %> Perempuan
+					</li>
+					
+					
+					<li>
+						<!-- <label class="required" title="tempat lahir" for="birthplace">
+													Tempat Lahir
+												</label>
+												<input id="birthplace" type="text" name="birthplace"> -->
+						<%= f.label :birthplace, "Tempat Lahir", :class => "required"%>
+						<%= f.text_field :birthplace %>
+					</li>
+					
+					<li>
+						<!-- <label class="required" title="Tanggal Lahir" for="birthday">
+													Tanggal Lahir
+												</label>
+												<input id="birthday" type="text" name="birthday"> -->
+						
+						<%= f.label :birthday, "Tanggal Lahir", :class => "required"%>
+						<%= f.date_select :birthdate, {:order => [:day, :month, :year] , :start_year => Time.now.year - 60} %>
+						
+					</li>
+					
+					
+					
+					<li>
+						<!-- <label class="required" title="Kewarganegaraan" for="nationality">
+													Kewarganegaraan
+												</label>
+												<input id="nationality" type="text" name="nationality"> -->
+						<%= f.label :nationality, "Kewarganegaraan", :class => "required"%>
+						<%= f.text_field :nationality %>
+					</li>
+					
+					<li>
+						<!-- <label class="required" title="Suku" for="race">
+													Suku
+												</label>
+												<input id="race" type="text" name="race"> -->
+						<%= f.label :race, "Suku", :class => "required"%>
+						<%= f.text_field :race %>
+					</li>
+					
+					<li>
+						<!-- <label class="required" title="Suku" for="photo">
+													Foto
+												</label>
+												<input id="photo" type="file" name="photo"> -->
+						<%= f.label :photo, "Foto", :class => "required"%>
+						<%= f.file_field :photo %>
+						
+					</li>
+				</ol>
+			</fieldset>
+			
+			<fieldset id="identity" class="second employee-partition">
+				<legend><span>Identitas</span></legend>
+				<ol>
+					<li>
+						<!-- <label class="required" title="nomor identitas" for="identity_number">
+													<%= "Nomor Identitas (KTP/SIM)" %>
+												</label>
+												<input id="identity_number" type="text" name="identity_number"> -->
+						<%= f.label :identity_number, "Nomor Identitas (KTP/SIM)", :class => "required"%>
+						<%= f.text_field :identity_number %>
+					</li>
+					
+					<li>
+						<!-- <label class="required" title="Agama" for="religion">
+													Agama
+												</label>
+												<input id="religion" type="text" name="religion"> -->
+						<%= f.label :religion, "Agama", :class => "required"%>
+						<%= f.text_field :religion %>
+					</li>
+					
+					
+					<li>
+						<!-- <label class="required" title="Golongan Darah" for="bloodtype">
+										Golongan Darah
+									</label>
+									<input type="radio" value="A" name="bloodtype" id="bloodtype" class="radio" name="bloodtype">
+										A
+									<input type="radio" value="B" name="bloodtype" id="bloodtype" class="radio" name="bloodtype">
+										B
+									<input type="radio" value="AB" name="bloodtype" id="bloodtype" class="radio" name="bloodtype">
+									  AB
+									<input type="radio" value="O" name="bloodtype" id="bloodtype" class="radio" name="bloodtype">
+										O -->
+							
+						<%= f.label :blood_type, "Golongan Darah", :class => "required"%>
+						<%= f.radio_button 'blood_type', '0' %> A
+						<%= f.radio_button 'blood_type', '1' %> B
+						<%= f.radio_button 'blood_type', '2' %> AB
+						<%= f.radio_button 'blood_type', '3' %> O
+					</li>
+					
+					<li>
+						<!-- <label class="required" title="Alamat Sesuai KTP" for="registered_address">
+													Alamat Sesuai KTP
+												</label>
+												<input id="registered_address" type="text" name="registered_address"> -->
+						<%= f.label :registered_address, "Alamat Sesuai KTP", :class => "required"%>
+						<%= f.text_field :registered_address %>
+					</li>
+					
+					<li>
+						<!-- <label class="required" title="Kota" for="registered_city">
+													Kota
+												</label>
+												<input id="registered_city" type="text" name="registered_city"> -->
+						<%= f.label :registered_city, "Kota", :class => "required"%>
+						<%= f.text_field :registered_city %>
+					</li>
+					
+					<li>
+						<!-- <label class="required" title="Suku" for="registered_postal_code">
+													Kode Pos
+												</label>
+												<input id="registered_postal_code" type="text" name="registered_postal_code"> -->
+						<%= f.label :registered_postal_code, "Kode Pos", :class => "required"%>
+						<%= f.text_field :registered_postal_code %>
+					</li>
+					
+					
+					<li>
+						<!-- <label class="required" title="Alamat Sekarang" for="current_address">
+													Alamat Sekarang
+												</label>
+												<input id="current_address" type="text" name="current_address"> -->
+						<%= f.label :current_address, "Alamat Sekarang", :class => "required"%>
+						<%= f.text_field :current_address %>
+					</li>
+					
+					<li>
+						<!-- <label class="required" title="kota" for="current_city">
+													Kota
+												</label>
+												<input id="current_city" type="text" name="current_city"> -->
+						<%= f.label :current_city, "Kota", :class => "required"%>
+						<%= f.text_field :current_city %>
+					</li>
+					
+					<li>
+						<!-- <label class="required" title="Alamat Sekarang" for="current_postal_code">
+													Kode Pos
+												</label>
+												<input id="current_postal_code" type="text" name="current_postal_code"> -->
+						<%= f.label :current_postal_code, "Kode Pos", :class => "required"%>
+						<%= f.text_field :current_postal_code %>
+					</li>
+				</ol>
+			</fieldset>
+			
+			<fieldset id="contact" class="third employee-partition">
+				<legend><span>Contact</span></legend>
+				<ol>
+					<li>
+						<!-- <label class="required" title="Alamat Email" for="email">
+													Alamat Email
+												</label>
+												<input id="email" type="text" name="email"> -->
+						<%= f.label :email, "Alamat Email", :class => "required"%>
+						<%= f.text_field :email %>
+					</li>
+					
+					
+					
+					<li>
+						<!-- <label class="required" title="No Telp Rumah" for="residential_phone_number">
+													No Telp Rumah
+												</label>
+												<input id="residential_phone_number" type="text" name="residential_phone_number"> -->
+						<%= f.label :residential_phone_number, "No Telp Rumah", :class => "required"%>
+						<%= f.text_field :residential_phone_number %>
+					</li>
+					
+					<li>
+						<!-- <label class="required" title="No Handphone" for="mobile_phone_number">
+													No Handphone
+												</label>
+												<input id="mobile_phone_number" type="text" name="mobile_phone_number"> -->
+						<%= f.label :mobile_phone_number, "No Handphone", :class => "required"%>
+						<%= f.text_field :mobile_phone_number %>
+					</li>
+					
+					
+					<li>
+						<!-- <label class="required" title="Status Perkawinan" for="marriage_status">
+													Status Perkawinan
+												</label>
+												<input type="radio" value="Belum Menikah" name="marriage_status" id="marriage_status" class="radio" name="marriage_status">
+													Belum Menikah
+												<input type="radio" value="Janda" name="marriage_status" id="marriage_status" class="radio" name="marriage_status">
+													<%= "Janda / Duda Cerai" %>
+												<input type="radio" value="Menikah" name="marriage_status" id="marriage_status" class="radio" name="marriage_status">
+													Menikah -->
+							
+						<%= f.label :marriage_status, "Status Perkawinan", :class => "required"%>
+						<%= f.radio_button 'marriage_status', '0' %> Belum Menikah
+						<%= f.radio_button 'marriage_status', '1' %> <%= "Janda / Duda Cerai" %>
+						<%= f.radio_button 'marriage_status', '2' %> Menikah
+					</li>
+					
+					
+					
+					<li>
+						<!-- <label class="required" title="Status Rumah" for="residential_status">
+									Status Rumah
+								</label>
+								<input type="radio" value="Milik Sendiri" name="residential_status" id="residential_status" class="radio" name="residential_status">
+									Milik Sendiri
+								<input type="radio" value="Milik Keluarga" name="residential_status" id="residential_status" class="radio" name="residential_status">
+									Milik Keluarga
+								<input type="radio" value="Kontrak" name="residential_status" id="residential_status" class="radio" name="residential_status">
+									Kontrak
+								<input type="radio" value="Kost" name="residential_status" id="residential_status" class="radio" name="residential_status">
+									Kost -->
+							
+						<%= f.label :residential_status, "Status Perkawinan", :class => "required"%>
+						<%= f.radio_button 'residential_status', '0' %> Milik Sendiri
+						<%= f.radio_button 'residential_status', '1' %> Milik Keluarga
+						<%= f.radio_button 'residential_status', '2' %> Kontrak
+						<%= f.radio_button 'residential_status', '3' %> Kost
+					</li>
+					
+					<li>
+						<!-- <label class="required" title="NPWP" for="tax_number">
+													NPWP
+												</label>
+												<input id="tax_number" type="text" name="tax_number"> -->
+						<%= f.label :tax_number, "NPWP", :class => "required"%>
+						<%= f.text_field :tax_number %>
+					</li>
+					
+					<li>
+						<!-- <label class="required" title="Bank" for="bank">
+													Nama Bank
+												</label>
+												<input id="bank" type="text" name="bank"> -->
+						<%= f.label :bank, "Nama Bank", :class => "required"%>
+						<%= f.text_field :bank %>
+					</li>
+					
+					<li>
+						<!-- <label class="required" title="No Rekening" for="bank_account_number">
+													No Rekening
+												</label>
+												<input id="bank_account_number" type="text" name="bank_account_number"> -->
+						<%= f.label :bank_account_number, "No Rekening", :class => "required"%>
+						<%= f.text_field :bank_account_number %>
+					</li>
+				</ol>
+			</fieldset>
+			
+		
+			
+			<div id="fieldset-control">
+				<a href="#" class="back">Kembali</a>
+				<a href="#" class="next">Berikut</a>
+				<input type="submit" value="Simpan Karyawan" id="formsubmit">
+			</div>
+		<!-- </form> -->
+		<% end %>
+	</div>
+</div>

@@ -10,11 +10,14 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110409124145) do
+ActiveRecord::Schema.define(:version => 20110410141441) do
 
   create_table "employees", :force => true do |t|
+    t.string   "nik"
     t.string   "name"
     t.string   "sex"
+    t.string   "birthplace"
+    t.date     "birthdate"
     t.string   "nationality"
     t.string   "race"
     t.string   "identity_number"
@@ -27,7 +30,7 @@ ActiveRecord::Schema.define(:version => 20110409124145) do
     t.string   "current_address"
     t.string   "current_city"
     t.string   "current_postal_code"
-    t.integer  "residential_status"
+    t.integer  "residential_status",       :limit => 255
     t.integer  "marriage_status"
     t.string   "email"
     t.string   "residential_phone_number"
@@ -37,6 +40,10 @@ ActiveRecord::Schema.define(:version => 20110409124145) do
     t.string   "bank_account_number"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "photo_file_name"
+    t.string   "photo_content_type"
+    t.integer  "photo_file_size"
+    t.datetime "photo_updated_at"
   end
 
 end

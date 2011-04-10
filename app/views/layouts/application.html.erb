@@ -5,14 +5,17 @@
 
 <head>
   <title>Humanresc</title>
-  <%= stylesheet_link_tag   "base", "flutie" , "application" %>
-  <%= javascript_include_tag "jquery.min" %>
+  <%= stylesheet_link_tag   "base", "flutie" , "jquery.fancybox-1.3.4", "application" %>
+  <%= javascript_include_tag "jquery.min" , "jquery.fancybox-1.3.4.pack", "application" %>
   <%= csrf_meta_tag %>
 </head>
 <body>
-
-<%= yield %>
-
-
+	<div id="wrapper">
+		<%= render :partial => "layouts/header" %>
+		
+		<%= yield %>
+		
+		<%= render :partial => "layouts/footer" %>
+	</div>
 </body>
 </html>

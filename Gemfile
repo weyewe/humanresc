@@ -3,7 +3,7 @@ source 'http://rubygems.org'
 gem 'rails', '3.0.5'
 gem 'formtastic', '~> 1.2.3'
 gem "flutie", "~> 1.1" , :git => "https://github.com/thoughtbot/flutie.git"
-
+gem "paperclip", "~> 2.3"
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 

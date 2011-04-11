@@ -12,16 +12,16 @@ jQuery(function() {
 			var current_display = $(this).css('display');
 			if( current_display == 'block'){
 				if(  $(this).hasClass("first") ){
-					$("fieldset.second").show();
-					$("a.back").show();
-					$(this).hide();
+					$("fieldset.second").fadeIn(3000);
+					$("a.back").fadeIn();
+					$(this).fadeOut();
 					return false;
 				}
 				
 				if( $(this).hasClass("second") ){
-					$("fieldset.third").show();
-					$("fieldset#submitform").show();
-					$("input#formsubmit").show();
+					$("fieldset.third").fadeIn(3000);
+					$("fieldset#submitform").fadeIn();
+					$("input#formsubmit").fadeIn();
 					$(this).hide();
 					nextButton.hide();
 					return false;
@@ -37,7 +37,7 @@ jQuery(function() {
 			var current_display = $(this).css('display');
 			if( current_display == 'block'){
 				if(  $(this).hasClass("second") ){
-					$("fieldset.first").show();
+					$("fieldset.first").fadeIn(3000);
 					backButton.hide();
 					$(this).hide();
 					$("input#formsubmit").hide();
@@ -45,7 +45,7 @@ jQuery(function() {
 				}
 				
 				if( $(this).hasClass("third") ){
-					$("fieldset.second").show();
+					$("fieldset.second").fadeIn(3000);
 					$("a.next").show();
 					$("input#formsubmit").hide();
 					$("fieldset#submitform").hide();

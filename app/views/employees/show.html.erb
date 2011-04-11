@@ -1,15 +1,22 @@
 <div id="content-wrapper">
-	<div id="breadcrumb">
-	</div>
+	
 	
 	<div id="content">
-		<h2 class="section-header">Data Pribadi</h2>
 		
-		<h2 class="section-header">Susunan Keluarga</h2>
-		
-		<h2 class="section-header"><%= "Suami/Istri/Anak" %></h2>
-		<h2 class="section-header">Riwayat Pendidikan</h2>
-		<h2 class="section-header"><%= "Kursus/Pelatihan" %>
+		<div id="data-display-wrapper">
+			<div id="core-data" class="clearfix">
+				<div class="image-wrapper">
+					<%= image_tag @employee.photo.url(:medium) %>  
+				</div>
+				<div class="info-wrapper">
+					<span class="name">Willy Yunnal Wirawan</span>
+					<%= render :partial => "profile_menu" %>
+					<%= render :partial => "profile_wrapper", :locals => { :employee => @employee } %>
+				</div>
+			</div><!-- #core-data -->
+		</div> <!-- #data-display-wrapper -->
 	</div>
 </div>
+
+<%= render :partial => "new_employee_form", :locals => { :employee => @employee } %>
 

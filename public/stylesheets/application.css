@@ -49,11 +49,12 @@
 	div#core-data span.name { font-size: 24px; font-weight: bold; color: rgb(50, 50, 50);  display:block; height: 30px; padding-top: 3px;}
 		/* breadcrumb */
 		div#breadcrumb { margin-bottom:10px; }
-		div#breadcrumb  a { font-size:16px; margin: 0 3px; text-decoration:none; background-color: rgb(230,230,230); color:rgb(50,50,50); padding: 1px 3px;}
-		div#breadcrumb  a.active { background-color: rgb(150,150,150); font-weight: bold;}
+		div#breadcrumb  a { font-size:16px; margin: 0 3px; text-decoration:none; background-color: rgb(230,230,230); color:rgb(50,50,50); padding: 1px 3px; cursor: pointer;}
+		div#breadcrumb  a.active { background-color: rgb(150,150,150); color: rgb(50,50,50); }
+		div#breadcrumb  a:hover {background-color: rgb(150,150,150); color: white; }
 	
 	div#core-data  div.info-wrapper { float : left; padding-left: 50px; border-left: 1px solid rgb(230,230,230); width: 600px;}
-	div#core-data  div.info-wrapper  ol {list-style: none outside none;   padding: 5px 10px 10px; border-bottom: 1px dashed #FAFAFA; }
+	div#core-data  div.info-wrapper  ol {list-style: none outside none;   /*padding: 5px 10px 10px; */border-bottom: 1px dashed #FAFAFA; }
 	div#core-data  div.info-wrapper  ol li { line-height: 3.4em; padding-bottom: 1em; position: relative; height:21px;}
 	div#core-data  div.info-wrapper  ol li span.key { clear: left;  float: left; line-height: 3.4em;  margin-right: 5px; padding-right: 30px; position: relative;  text-align: right; width: 10em; height: 21px;}
 	div#core-data  div.info-wrapper  ol li span.value { font-size:18px;}
@@ -61,5 +62,8 @@
 	div#core-data  div.info-wrapper  ol li.address { height: 60px;}
 	div#core-data  div.info-wrapper  ol li.address div.address_wrapper { width: 100%;}
 	
+	div#family-data-wrapper span.section_header { font-size:18px; text-decoration: underline;}
+	div#family-data-wrapper a.add_family { background-color: #2D9637; color: white; font-weight:bold; text-decoration: none; border: 1px solid green; padding: 2px; font-size:16px;}
+	input#relativeSubmit { background: none repeat scroll 0 0 #F5F6D4;  border: 1px solid #493F0B; color: #1E1903;   cursor: pointer;   float: right; font-size: 1.4em;  padding: 5px;}
 	
 div#footer { height:100px;}

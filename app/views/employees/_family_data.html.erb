@@ -1,0 +1,99 @@
+<div id="family-data-wrapper" class="employee-content-wrapper clearfix"  style="padding:5px 10px 10px; display:none;">
+	<span class="section_header">Ayah</span>
+	<ol>
+		<li>
+			<span class="key">Nama</span>
+			<span class="value">Yunal Wijaya</span>
+		</li>
+		
+		<li>
+			<span class="key">Jenis Kelamin</span>
+			<span class="value">Pria</span>
+		</li>
+		
+		<li>
+			<span class="key">Pendidikan Terakhir</span>
+			<span class="value">SMA</span>
+		</li>
+		
+		<li>
+			<span class="key">Tempat Lahir</span>
+			<span class="value">Jakarta</span>
+		</li>
+		
+		<li>
+			<span class="key">Tanggal Lahir</span>
+			<span class="value">12 September 1987</span>
+		</li>
+		
+		<li>
+			<span class="key">Perusahaan</span>
+			<span class="value">Indofood</span>
+		</li>
+		
+		<li>
+			<span class="key">Jabatan</span>
+			<span class="value">XXX</span>
+		</li>
+	</ol>
+	
+	<%= render :partial => "relatives/relative_entry"%>
+	
+	<a class="add_family" href="#new_relative_wrapper">Tambah</a>
+</div>
+
+<div id="form_new_relative"  style="display:none;">
+	<div class="form_wrapper " id="new_relative_wrapper">
+		<% form_for employee_relatives_url(employee) do |f| %>
+			<fieldset id="personal" class="first employee-partition">
+				<legend><span>Anggota Keluarga</span></legend>
+				<ol>
+					<li>
+						<%= f.label :name, "Nama ", :class => "required"%>
+						<%= f.text_field :name %>
+					</li>
+					
+					<li>
+						<%= f.label :relationship, "Hubungan Keluarga ", :class => "required"%>
+						<%= f.text_field :relationship %>
+					</li>
+				
+					<li>
+						<%= f.label :sex, "Jenis Kelamin", :class => "required"%>
+						<%= f.radio_button 'sex', '0' %> <%= "Laki-laki" %>
+						<%= f.radio_button 'sex', '1' %> Perempuan
+					</li>
+				
+					<li>
+						<%= f.label :last_education, "Pendidikan Terakhir", :class => "required"%>
+						<%= f.text_field :last_education %>
+					</li>
+				
+					<li>
+						<%= f.label :name, "Tempat Lahir", :class => "required"%>
+						<%= f.text_field :name %>
+					</li>
+				
+				
+					<li>
+						<%= f.label :birthplace, "Tanggal Lahir", :class => "required"%>
+						<%= f.date_select :birthdate, {:order => [:day, :month, :year] , :start_year => Time.now.year - 60} %>
+					</li>
+				
+					<li>
+						<%= f.label :company, "Perusahaan", :class => "required"%>
+						<%= f.text_field :company %>
+					</li>
+				
+					<li>
+						<%= f.label :title, "Jabatan", :class => "required"%>
+						<%= f.text_field :title %>
+					</li>
+				</ol>
+				<input type="submit" value="Simpan Keluarga" id="relativeSubmit">
+			</fieldset>
+		<% end %> 
+	</div>
+</div>
+		
+		

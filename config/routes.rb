@@ -25,7 +25,9 @@ Humanresc::Application.routes.draw do
   #     end
   #   end
   
-  resources :employees
+  resources :employees do 
+    resources :relatives
+  end
   # Sample resource route with sub-resources:
   #   resources :products do
   #     resources :comments, :sales

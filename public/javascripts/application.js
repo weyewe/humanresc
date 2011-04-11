@@ -5,6 +5,11 @@ jQuery(function() {
 		'scrolling' : 'no'
 	});
 	
+	$("a.add_family").fancybox({
+		'autoDimensions' : true,
+		'scrolling' : 'no'
+	});
+	
 	$("a.next").click(function(){
 		var nextButton = $(this);
 		$("fieldset.employee-partition").each( function(){
@@ -54,6 +59,24 @@ jQuery(function() {
 				}
 			}
 		});
+	});
+	
+	
+	$("a.breadcrumb-selector").click(function(){
+	
+		var contentId =  $(this).attr('contentId');
+		
+		$("a.breadcrumb-selector").each(function(){
+			if( $(this).hasClass("active")){
+				var currentContentId = $(this).attr("contentId");
+				$(this).removeClass("active");
+				$("div#" + currentContentId).hide();
+			}
+		});
+		
+		$("div#" + contentId).fadeIn();
+		$(this).addClass("active");
+		return false;
 	});
 		
 });

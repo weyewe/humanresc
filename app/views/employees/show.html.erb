@@ -11,12 +11,13 @@
 				<div class="info-wrapper">
 					<span class="name">Willy Yunnal Wirawan</span>
 					<%= render :partial => "profile_menu" %>
-					<%= render :partial => "profile_wrapper", :locals => { :employee => @employee } %>
+					<%= render :partial => "personal_data", :locals => { :employee => @employee } %>
+					<%= render :partial => "family_data", :locals => { :employee => @employee, :relative => @relative } %>
 				</div>
 			</div><!-- #core-data -->
 		</div> <!-- #data-display-wrapper -->
 	</div>
 </div>
 
-<%= render :partial => "new_employee_form", :locals => { :employee => @employee } %>
+<%= render :partial => "new_employee_form", :locals => { :employee => @employee} %>
 

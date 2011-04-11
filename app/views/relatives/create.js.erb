@@ -1,0 +1,7 @@
+if( $('div#family-data-wrapper ol').length() == 0  ){
+	$('div#family-data-wrapper span.section_header').after('<%= escape_javascript(render :partial => "relatives/relative_entry",
+	 :locals => { :relative => @relative}) %>');
+}else{
+	$('div#family-data-wrapper ol').append('<%= escape_javascript(render :partial => "relatives/relative_entry",
+	 :locals => { :relative => @relative}) %>');
+}

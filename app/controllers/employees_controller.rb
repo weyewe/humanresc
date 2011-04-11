@@ -12,5 +12,6 @@ class EmployeesController < ApplicationController
   
   def show
     @employee = Employee.find_by_id( params[:id])
+    @relative = @employee.relatives.new
   end
 end

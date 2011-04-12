@@ -3,7 +3,7 @@ class CreateEmployees < ActiveRecord::Migration
     create_table :employees do |t|
       t.string :nik
       t.string :name
-      t.string :sex  # 0 == female, 1 == male
+      t.integer :sex  # 0 == female, 1 == male
       t.string :birthplace
       t.date :birthdate
       t.string :nationality

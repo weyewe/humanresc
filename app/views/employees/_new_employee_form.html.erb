@@ -34,8 +34,9 @@
 												<input type="radio" value="Female" name="sex" id="sex" class="radio" name="sex">
 													Perempuan -->
 						<%= f.label :sex, "Jenis Kelamin", :class => "required"%>
-						<%= f.radio_button 'sex', '0' %> <%= "Laki-laki" %>
-						<%= f.radio_button 'sex', '1' %> Perempuan
+						<% SEX_CONSTANT.each do |value, display | %>
+							<%= f.radio_button 'sex' , value %> <%= display %>
+						<% end %>
 					</li>
 					
 					
@@ -127,10 +128,13 @@
 										O -->
 							
 						<%= f.label :blood_type, "Golongan Darah", :class => "required"%>
-						<%= f.radio_button 'blood_type', '0' %> A
-						<%= f.radio_button 'blood_type', '1' %> B
-						<%= f.radio_button 'blood_type', '2' %> AB
-						<%= f.radio_button 'blood_type', '3' %> O
+						<% BLOODTYPE_CONSTANT.each do |value, display | %>
+							<%= f.radio_button 'blood_type' , value %> <%= display %>
+						<% end %>
+						<!-- <%= f.radio_button 'blood_type', '0' %> A
+												<%= f.radio_button 'blood_type', '1' %> B
+												<%= f.radio_button 'blood_type', '2' %> AB
+												<%= f.radio_button 'blood_type', '3' %> O -->
 					</li>
 					
 					<li>
@@ -235,9 +239,12 @@
 													Menikah -->
 							
 						<%= f.label :marriage_status, "Status Perkawinan", :class => "required"%>
-						<%= f.radio_button 'marriage_status', '0' %> Belum Menikah
-						<%= f.radio_button 'marriage_status', '1' %> <%= "Janda / Duda Cerai" %>
-						<%= f.radio_button 'marriage_status', '2' %> Menikah
+						<% MARRIAGE_STATUS_CONSTANT.each do |value, display | %>
+							<%= f.radio_button 'marriage_status' , value %> <%= display %>
+						<% end %>
+						<!-- <%= f.radio_button 'marriage_status', '0' %> Belum Menikah
+												<%= f.radio_button 'marriage_status', '1' %> <%= "Janda / Duda Cerai" %>
+												<%= f.radio_button 'marriage_status', '2' %> Menikah -->
 					</li>
 					
 					
@@ -256,10 +263,13 @@
 									Kost -->
 							
 						<%= f.label :residential_status, "Status Rumah", :class => "required"%>
-						<%= f.radio_button 'residential_status', '0' %> Milik Sendiri
-						<%= f.radio_button 'residential_status', '1' %> Milik Keluarga
-						<%= f.radio_button 'residential_status', '2' %> Kontrak
-						<%= f.radio_button 'residential_status', '3' %> Kost
+						<% RESIDENTIAL_STATUS_CONSTANT.each do |value, display | %>
+							<%= f.radio_button 'residential_status' , value %> <%= display %>
+						<% end %>
+						<!-- <%= f.radio_button 'residential_status', '0' %> Milik Sendiri
+												<%= f.radio_button 'residential_status', '1' %> Milik Keluarga
+												<%= f.radio_button 'residential_status', '2' %> Kontrak
+												<%= f.radio_button 'residential_status', '3' %> Kost -->
 					</li>
 					
 					<li>

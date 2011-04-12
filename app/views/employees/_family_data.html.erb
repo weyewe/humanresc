@@ -24,8 +24,9 @@
 				
 					<li>
 						<%= f.label :sex, "Jenis Kelamin", :class => "required"%>
-						<%= f.radio_button 'sex', '0' %> Perempuan
-						<%= f.radio_button 'sex', '1' %> <%= "Laki-laki" %>
+						<% SEX_CONSTANT.each do |value, display | %>
+							<%= f.radio_button 'sex' , value %> <%= display %>
+						<% end %>
 					</li>
 				
 					<li>

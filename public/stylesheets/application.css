@@ -1,3 +1,4 @@
+body { overflow-y: scroll; }
 #wrapper { background-color: rgb(240,240,240); }
 #header { height: 80px; margin:0 ; padding:0 ; text-align:left; border-bottom: 1px solid #C8C8C8;}
 #header div.inner { margin: 0 auto; padding: 11px 0 8px; width: 996px;  }
@@ -40,7 +41,6 @@
 	div#fieldset-control a.back:hover {color: rgb(60,60,60); background: rgb(200,200,200); font-weight: bold; }
 	
 	/* Employee#show */
-	
 	
 	
 	div#data-display-wrapper { padding-top : 20px;}

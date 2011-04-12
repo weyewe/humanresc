@@ -15,7 +15,7 @@ ActiveRecord::Schema.define(:version => 20110411071111) do
   create_table "employees", :force => true do |t|
     t.string   "nik"
     t.string   "name"
-    t.string   "sex"
+    t.integer  "sex"
     t.string   "birthplace"
     t.date     "birthdate"
     t.string   "nationality"

@@ -2,46 +2,46 @@
 <ol>
 	<li>
 		<span class="key">NIK</span>
-		<span class="value">AB324987</span>
+		<span class="value"><%= employee.nik %></span>
 	</li>
 
 	<li>
 		<span class="key">Jenis Kelamin</span>
-		<span class="value">AB324987</span>
+		<span class="value"><%= SEX_CONSTANT[employee.sex]%></span>
 	</li>
 
 	<li>
 		<span class="key">Tempat Lahir</span>
-		<span class="value">Jakarta</span>
+		<span class="value"><%= employee.birthplace%></span>
 	</li>
 
 	<li>
 		<span class="key">Tanggal Lahir</span>
-		<span class="value">12 September 1987</span>
+		<span class="value"><%= employee.birthdate %></span>
 	</li>
 
 
 	<li>
 		<span class="key">Suku</span>
-		<span class="value">Melayu</span>
+		<span class="value"><%= employee.race %></span>
 	</li>
 </ol>
 
 <ol>
 	<li>
 		<span class="key">Nomor Identitas</span>
-		<span class="value">AB324987</span>
+		<span class="value"><%= employee.identity_number %></span>
 	</li>
 
 	<li>
 		<span class="key">Agama</span>
-		<span class="value">Kristen</span>
+		<span class="value"><%= employee.religion%></span>
 	</li>
 
 
 	<li>
 		<span class="key">Golongan Darah</span>
-		<span class="value">O</span>
+		<span class="value"><%= BLOODTYPE_CONSTANT[employee.blood_type] %></span>
 	</li>
 
 
@@ -49,8 +49,8 @@
 	<li class="address">
 		<span class="key">Alamat KTP</span>
 		<div class="address_wrapper">
-			<span class="value">Perumahan Citra Garden 1 AC2/3G</span>
-			<span class="appendix">Kalideres, 11840</span>
+			<span class="value"><%= employee.registered_address %></span>
+			<span class="appendix"><%= employee.registered_city %>, <%= employee.registered_postal_code %></span>
 		</div>
 	</li>
 
@@ -58,8 +58,8 @@
 	<li class="address">
 		<span class="key">Alamat Sekarang</span>
 		<div class="address_wrapper">
-			<span class="value">Perumahan Citra Garden 1 AC2/3G</span>
-			<span class="appendix">Kalideres, 11840</span>
+			<span class="value"><%= employee.current_address %></span>
+			<span class="appendix"><%= employee.current_city %>, <%= employee.current_postal_code %></span>
 			<span class="appendix"></span>
 		</div>
 	</li>
@@ -68,43 +68,43 @@
 <ol>
 	<li>
 		<span class="key">Email</span>
-		<span class="value"><%= "w.yunnal@gmail.com" %></span>
+		<span class="value"><%= employee.email %></span>
 	</li>
 
 	<li>
 		<span class="key">Telp rumah</span>
-		<span class="value">5456369</span>
+		<span class="value"><%= employee.residential_phone_number %></span>
 	</li>
 
 
 	<li>
 		<span class="key">Handphone</span>
-		<span class="value">82971123</span>
+		<span class="value"><%= employee.mobile_phone_number %></span>
 	</li>
 
 	<li>
 		<span class="key">Status Perkawinan</span>
-		<span class="value">Single</span>
+		<span class="value"><%= MARRIAGE_STATUS_CONSTANT[employee.marriage_status] %></span>
 	</li>
 
 	<li>
 		<span class="key">Status Rumah</span>
-		<span class="value">Pribadi</span>
+		<span class="value"><%= RESIDENTIAL_STATUS_CONSTANT[employee.residential_status]%></span>
 	</li>
 
 	<li>
 		<span class="key">NPWP</span>
-		<span class="value">234234234</span>
+		<span class="value"><%= employee.tax_number %></span>
 	</li>
 
 	<li>
 		<span class="key">Nama Bank</span>
-		<span class="value">BCA</span>
+		<span class="value"><%= employee.bank %></span>
 	</li>
 
 	<li>
 		<span class="key">No Rekening</span>
-		<span class="value">2342342</span>
+		<span class="value"><%= employee.bank_account_number %></span>
 	</li>
 
 

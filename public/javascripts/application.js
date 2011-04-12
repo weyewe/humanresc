@@ -1,5 +1,6 @@
 jQuery(function() {  
 
+
 	$("a.add_employee").fancybox({
 		'autoDimensions' : true,
 		'scrolling' : 'no'
@@ -78,7 +79,37 @@ jQuery(function() {
 		$(this).addClass("active");
 		return false;
 	});
+	
+	$("form.ajax_form").submit(function(){
+		var theForm = $(this);
+		$.ajax({type: "POST", url: $(this).attr("action"), data: $(this).serialize(), 
+		 	dataType: "script",
+			success: function(html){
+					$.fancybox.close();
+					theForm.clearForm();
+			}
+		});
+		
+		
+		
+		return false;
+	});
 		
 });
+
+$.fn.clearForm = function() {
+  return this.each(function() {
+ var type = this.type, tag = this.tagName.toLowerCase();
+ if (tag == 'form')
+   return $(':input',this).clearForm();
+ if (type == 'text' || type == 'password' || tag == 'textarea')
+   this.value = '';
+ else if (type == 'checkbox' || type == 'radio')
+   this.checked = false;
+ else if (tag == 'select')
+   this.selectedIndex = -1;
+  });
+};
+
 
 

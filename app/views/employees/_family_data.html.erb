@@ -36,15 +36,16 @@
 			<span class="value">XXX</span>
 		</li>
 	</ol>
-	
-	<%= render :partial => "relatives/relative_entry"%>
+	<% for relative in relatives %>
+		<%= render :partial => "relatives/relative_entry", :locals => {:relative => relative}%>
+	<% end %>
 	
 	<a class="add_family" href="#new_relative_wrapper">Tambah</a>
 </div>
 
 <div id="form_new_relative"  style="display:none;">
 	<div class="form_wrapper " id="new_relative_wrapper">
-		<% form_for employee_relatives_url(employee) do |f| %>
+		<% form_for [employee, new_relative] , :html => {:class => "ajax_form" } do |f| %>
 			<fieldset id="personal" class="first employee-partition">
 				<legend><span>Anggota Keluarga</span></legend>
 				<ol>
@@ -60,8 +61,8 @@
 				
 					<li>
 						<%= f.label :sex, "Jenis Kelamin", :class => "required"%>
-						<%= f.radio_button 'sex', '0' %> <%= "Laki-laki" %>
-						<%= f.radio_button 'sex', '1' %> Perempuan
+						<%= f.radio_button 'sex', '0' %> Perempuan
+						<%= f.radio_button 'sex', '1' %> <%= "Laki-laki" %>
 					</li>
 				
 					<li>
@@ -70,13 +71,13 @@
 					</li>
 				
 					<li>
-						<%= f.label :name, "Tempat Lahir", :class => "required"%>
-						<%= f.text_field :name %>
+						<%= f.label :birthplace, "Tempat Lahir", :class => "required"%>
+						<%= f.text_field :birthplace %>
 					</li>
 				
 				
 					<li>
-						<%= f.label :birthplace, "Tanggal Lahir", :class => "required"%>
+						<%= f.label :birthdate, "Tanggal Lahir", :class => "required"%>
 						<%= f.date_select :birthdate, {:order => [:day, :month, :year] , :start_year => Time.now.year - 60} %>
 					</li>
 				

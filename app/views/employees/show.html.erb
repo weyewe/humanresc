@@ -12,7 +12,9 @@
 					<span class="name">Willy Yunnal Wirawan</span>
 					<%= render :partial => "profile_menu" %>
 					<%= render :partial => "personal_data", :locals => { :employee => @employee } %>
-					<%= render :partial => "family_data", :locals => { :employee => @employee, :relative => @relative } %>
+					<%= render :partial => "family_data", :locals => { :employee => @employee,
+						 :relatives => @relatives,
+						 :new_relative  => @new_relative} %>
 				</div>
 			</div><!-- #core-data -->
 		</div> <!-- #data-display-wrapper -->

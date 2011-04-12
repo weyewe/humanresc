@@ -1,36 +1,39 @@
-<ol>
-	<li>
-		<span class="key">Nama</span>
-		<span class="value">Yunal Wijaya</span>
-	</li>
-	
-	<li>
-		<span class="key">Jenis Kelamin</span>
-		<span class="value">Pria</span>
-	</li>
-	
-	<li>
-		<span class="key">Pendidikan Terakhir</span>
-		<span class="value">SMA</span>
-	</li>
-	
-	<li>
-		<span class="key">Tempat Lahir</span>
-		<span class="value">Jakarta</span>
-	</li>
-	
-	<li>
-		<span class="key">Tanggal Lahir</span>
-		<span class="value">12 September 1987</span>
-	</li>
-	
-	<li>
-		<span class="key">Perusahaan</span>
-		<span class="value">Indofood</span>
-	</li>
-	
-	<li>
-		<span class="key">Jabatan</span>
-		<span class="value">XXX</span>
-	</li>
-</ol>
+<div>
+	<span class="section_header"><%= relative.relationship %></span>
+	<ol>
+		<li>
+			<span class="key">Nama</span>
+			<span class="value"><%= relative.name %></span>
+		</li>
+
+		<li>
+			<span class="key">Jenis Kelamin</span>
+			<span class="value"><%= relative.sex %></span>
+		</li>
+
+		<li>
+			<span class="key">Pendidikan Terakhir</span>
+			<span class="value"><%= relative.last_education %></span>
+		</li>
+
+		<li>
+			<span class="key">Tempat Lahir</span>
+			<span class="value"><%= relative.birthplace %></span>
+		</li>
+
+		<li>
+			<span class="key">Tanggal Lahir</span>
+			<span class="value"><%= relative.birthdate %></span>
+		</li>
+
+		<li>
+			<span class="key">Perusahaan</span>
+			<span class="value"><%= relative.company %></span>
+		</li>
+
+		<li>
+			<span class="key">Jabatan</span>
+			<span class="value"><%= relative.title %></span>
+		</li>
+	</ol>
+</div>

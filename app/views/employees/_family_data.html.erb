@@ -1,41 +1,4 @@
 <div id="family-data-wrapper" class="employee-content-wrapper clearfix"  style="padding:5px 10px 10px; display:none;">
-	<span class="section_header">Ayah</span>
-	<ol>
-		<li>
-			<span class="key">Nama</span>
-			<span class="value">Yunal Wijaya</span>
-		</li>
-		
-		<li>
-			<span class="key">Jenis Kelamin</span>
-			<span class="value">Pria</span>
-		</li>
-		
-		<li>
-			<span class="key">Pendidikan Terakhir</span>
-			<span class="value">SMA</span>
-		</li>
-		
-		<li>
-			<span class="key">Tempat Lahir</span>
-			<span class="value">Jakarta</span>
-		</li>
-		
-		<li>
-			<span class="key">Tanggal Lahir</span>
-			<span class="value">12 September 1987</span>
-		</li>
-		
-		<li>
-			<span class="key">Perusahaan</span>
-			<span class="value">Indofood</span>
-		</li>
-		
-		<li>
-			<span class="key">Jabatan</span>
-			<span class="value">XXX</span>
-		</li>
-	</ol>
 	<% for relative in relatives %>
 		<%= render :partial => "relatives/relative_entry", :locals => {:relative => relative}%>
 	<% end %>
@@ -56,7 +19,7 @@
 					
 					<li>
 						<%= f.label :relationship, "Hubungan Keluarga ", :class => "required"%>
-						<%= f.text_field :relationship %>
+						<%= f.select(:relationship , Relative.relationship_selections , {:prompt => "Pilih Hubungan Keluarga"}) %>
 					</li>
 				
 					<li>

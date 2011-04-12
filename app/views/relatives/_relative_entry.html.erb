@@ -1,5 +1,5 @@
-<div>
-	<span class="section_header"><%= relative.relationship %></span>
+<div class="relative_entry">
+		<span class="section_header"><%= RELATIVE_CONSTANT[relative.relationship] %></span>
 	<ol>
 		<li>
 			<span class="key">Nama</span>
@@ -8,7 +8,7 @@
 
 		<li>
 			<span class="key">Jenis Kelamin</span>
-			<span class="value"><%= relative.sex %></span>
+			<span class="value"><%= SEX_CONSTANT[relative.sex]  %></span>
 		</li>
 
 		<li>

@@ -1,7 +1,7 @@
-if( $('div#family-data-wrapper ol').size() == 0  ){
-	$('div#family-data-wrapper span.section_header').after('<%= escape_javascript(render :partial => "relatives/relative_entry",
+if( $('div#family-data-wrapper div.relative_entry').size() == 0  ){
+	$('div#family-data-wrapper').prepend('<%= escape_javascript(render :partial => "relatives/relative_entry",
 	 :locals => { :relative => @relative}) %>');
 }else{
-	$('div#family-data-wrapper ol:last').after('<%= escape_javascript(render :partial => "relatives/relative_entry",
+	$('div#family-data-wrapper div.relative_entry:last').after('<%= escape_javascript(render :partial => "relatives/relative_entry",
 	 :locals => { :relative => @relative}) %>');
 }

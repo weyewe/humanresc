@@ -9,7 +9,7 @@
 					<%= image_tag @employee.photo.url(:medium) %>  
 				</div>
 				<div class="info-wrapper">
-					<span class="name">Willy Yunnal Wirawan</span>
+					<span class="name"><%= @employee.name %></span>
 					<%= render :partial => "profile_menu" %>
 					<%= render :partial => "personal_data", :locals => { :employee => @employee } %>
 					<%= render :partial => "family_data", :locals => { :employee => @employee,
